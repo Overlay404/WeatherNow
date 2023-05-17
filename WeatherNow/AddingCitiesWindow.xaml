@@ -1,0 +1,38 @@
+﻿<Window x:Class="WeatherNow.AddingCitiesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        AllowsTransparency="True" WindowStyle="None"
+        mc:Ignorable="d" Background="Transparent"
+        WindowStartupLocation="CenterOwner"
+        Title="AddingCitiesWindow" Height="300" Width="400">
+    <Border TextBlock.FontSize="20" CornerRadius="10" Background="#0CFFFFFF">
+        <Grid>
+            <Image HorizontalAlignment="Right"
+                   Source="Image/ExitImage.png"
+                   Width="15" VerticalAlignment="Top"
+                   Margin="10" x:Name="ExitBtn"/>
+            <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom"
+                    Width="300">
+                <TextBlock Text="Название города:"/>
+                <TextBox Background="#33FFFFFF" 
+                     Foreground="White" 
+                     CaretBrush="White"
+                     x:Name="NameCity"/>
+                <TextBlock Text="Координаты:"/>
+                <TextBox Background="#33FFFFFF" 
+                     Foreground="White" 
+                     CaretBrush="White"
+                     x:Name="Coordinates"/>
+                <TextBlock FontSize="12" Text="Пример ввода координат: 23.12, 12.32"/>
+                <Button Content="Добавить"
+                        Height="30" Width="100"
+                        FontSize="12"
+                        x:Name="AddingCityBtn"
+                        Margin="0 30"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
