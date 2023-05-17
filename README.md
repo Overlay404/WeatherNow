@@ -30,3 +30,31 @@ WHERE ID_Prod =
 WHERE Name = 'ОСБ')
 GROUP BY m.Fio
 
+Вывести менеджера и товар, который продали 22 августа 2021
+
+SELECT m.Fio, p.Name FROM Sells s JOIN Managers m ON s.ID_Manag = m.ID
+JOIN Products p ON s.ID_Prod = p.ID
+WHERE s.Data = '22.08.2021'
+
+Вывести все товары, у которых в названии имеется 'Фанера' и 
+цена не ниже 1750
+
+SELECT Name FROM Products
+WHERE Cost >= 1750 AND Name LIKE '%Фанера%'
+
+
+Вывести историю продаж товаров, группируя по месяцу продажи 
+и наименованию товара
+
+SELECT p.Name as "Наименовавние товара", MONTH(s.Data) as "Месяц" FROM Sells s 
+JOIN Products p ON s.ID_Prod = p.ID
+GROUP BY p.Name, MONTH(s.Data)
+
+
+Вывести количество повторяющихся значений и сами значения 
+из таблицы 'Товары', где количество повторений больше 1.
+
+SELECT COUNT(Name) as "Количество повторяющихся значений в таблице", Name as "Наименование товара" FROM Products
+GROUP BY Name
+
+
