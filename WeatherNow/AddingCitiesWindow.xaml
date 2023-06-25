@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         AllowsTransparency="True" WindowStyle="None"
         mc:Ignorable="d" Background="Transparent"
-        WindowStartupLocation="CenterOwner"
+        WindowStartupLocation="CenterScreen"
         Title="AddingCitiesWindow" Height="300" Width="400">
-    <Border TextBlock.FontSize="20" CornerRadius="10" Background="#0CFFFFFF">
+    <Border TextBlock.FontSize="20" CornerRadius="10" Background="Black" x:Name="ElementRoot">
         <Grid>
             <Image HorizontalAlignment="Right"
                    Source="Image/ExitImage.png"

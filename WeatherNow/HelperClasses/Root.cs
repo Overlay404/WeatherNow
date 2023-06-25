@@ -9,9 +9,15 @@ namespace WeatherNow.HelperClasses
     // Структура для преобразования JSON в объект Root
     public class Root
     {
-        public Main Main { get; set; }
-        public Wind Wind { get; set; }
-        public List<WeatherItem> Weather { get; set; }
+        public List<Weather> list { get; set; }
+    }
+
+    public class Weather
+    {
+        public long dt { get; set; }
+        public Main main { get; set; }
+        public Wind wind { get; set; }
+        public List<WeatherItem> weather { get; set; }
     }
 
     public class WeatherItem
@@ -22,7 +28,8 @@ namespace WeatherNow.HelperClasses
 
     public class Main
     {
-        public double Temp { get; set; }
+        public double Temp_Min { get; set; }
+        public double Temp_Max { get; set; }
         public double Feels_Like { get; set; }
         public double Pressure { get; set; }
     }
