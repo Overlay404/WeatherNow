@@ -143,13 +143,9 @@
                                 <Image Source="{Binding IconWeather}"
                                     Width="40" Height="40"
                                     Margin="0 10"/>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding TemperatureMax, StringFormat='{}{0}°'}"
-                                    TextAlignment="Center"/>
-                                    <TextBlock Text="{Binding TemperatureMin, StringFormat='{}{0}°'}"
-                                    TextAlignment="Center"/>
-                                </StackPanel>
-                                <TextBlock Text="{Binding Name}"
+                                <TextBlock Text="{Binding TemperatureMax, StringFormat='{}{0}°'}"
+                                    TextAlignment="Center" FontSize="25"/>
+                                    <TextBlock Text="{Binding Name}"
                                            FontWeight="DemiBold"
                                            TextAlignment="Center"
                                        FontSize="25"/>

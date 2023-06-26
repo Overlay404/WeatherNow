@@ -221,7 +221,6 @@ namespace WeatherNow
                 IconWeather = GetImage($"https://openweathermap.org/img/wn/{w.Select(we => we.weather.First().Icon).First()}@4x.png"),
                 Name = w.Key.ToString("dddd"),
                 TemperatureMax = Math.Round(w.Average(weat => weat.main.Temp_Max)).ToString(),
-                TemperatureMin = Math.Round(w.Average(weat => weat.main.Temp_Min)).ToString(),
                 DataWeather = w.Select(root => root).First()
             });
 
